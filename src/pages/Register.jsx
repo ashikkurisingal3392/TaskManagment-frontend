@@ -5,6 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
+import ForwardIcon from '@mui/icons-material/Forward';
 
 import React, { useState } from 'react'
 
@@ -135,9 +136,14 @@ function Register() {
                      
 
                     </Stack>
+                      <Button component={Link} to={'/'} className='text-white mt-3'>
                     
+                      Back to TaskFlow   <ForwardIcon className='mx-2'></ForwardIcon> </Button>
                 </Grid>
+               
             </Grid>
+
+           
 
 
         </Container>

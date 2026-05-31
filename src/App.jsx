@@ -20,8 +20,8 @@ function App() {
     <>
 
     <Routes>
-        <Route path='/landing' element={<LandingPage></LandingPage>}/>
-      <Route path='/' element={<Register></Register>}/>
+        <Route path='/' element={<LandingPage></LandingPage>}/>
+      <Route path='/register' element={<Register></Register>}/>
       <Route path='/login' element={<Login></Login>} />
       <Route path='/dashboard' element={<Dashboard></Dashboard>} />
       <Route path='/mytasks' element={<MyTask></MyTask>} />

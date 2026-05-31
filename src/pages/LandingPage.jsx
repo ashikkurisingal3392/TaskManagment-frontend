@@ -13,7 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
-import Footer from '../components/Footer';
+import { Grid, Paper, Stack } from '@mui/material';
+import { Link } from "react-router-dom";
+
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailIcon from '@mui/icons-material/Mail';
 
 
 const pages = ['Home', 'Contact', 'Blog'];
@@ -165,11 +170,145 @@ function LandingPage() {
          </AppBar>
 
          {/* Main content section */}
+       {/* hero section */}
+         <Box
+        sx={{
+          background: "linear-gradient(135deg, #5e62a9, #1f1f1f)",
+          color: "white",
+          py: 10,
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h3" fontWeight={700}>
+          Organize Your Tasks Effortlessly
+        </Typography>
+        <Typography variant="h6" sx={{ mt: 2, opacity: 0.9 }}>
+          A simple, powerful task management tool to boost your productivity.
+        </Typography>
+      
+        <Button
+        component={Link}
+        to={'/register'}
+          variant="contained"
+          sx={{
+            mt: 4,
+            backgroundColor: "white",
+            color: "#5e62a9",
+            fontWeight: 700,
+            px: 4,
+            py: 1.5,
+            borderRadius: 3,
+          }}
+        >
+          Get Started
+        </Button>
+      
+       
+      </Box>
+
+        {/* FEATURES SECTION */}
+      <Container sx={{ py: 8 }}>
+        <Typography
+          variant="h4"
+          textAlign="center"
+          fontWeight={700}
+          sx={{ mb: 5 }}
+        >
+          Why Choose Task Flow?
+        </Typography>
+
+        <Grid container spacing={6}>
+          {[
+            {
+              title: "Easy Task Management",
+              desc: "Create, edit, delete and organize tasks with ease.",
+            },
+            {
+              title: "Smart Searching",
+              desc: "Searching tasks by task title.",
+            },
+            {
+              title: "Secure Login",
+              desc: "Your data stays safe with secure authentication.",
+            },
+            {
+              title:"Download Report",
+              desc:"Download task details with ease"
+            }
+          ].map((feature, index) => (
+            <Grid item size={{xs:12,md:6}}  key={index}>
+              <Paper
+                elevation={4}
+                sx={{ p: 4, textAlign: "center", borderRadius: 3 }}
+              >
+                <Typography variant="h6" fontWeight={700}>
+                  {feature.title}
+                </Typography>
+                <Typography sx={{ mt: 1, opacity: 0.8 }}>
+                  {feature.desc}
+                </Typography>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+            {/* CTA SECTION */}
+      <Box
+        sx={{
+          backgroundColor: "#5e62a9",
+          color: "white",
+          py: 8,
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h4" fontWeight={700}>
+          Ready to Boost Your Productivity?
+        </Typography>
+        <Typography sx={{ mt: 2, opacity: 0.9 }}>
+          Start managing your tasks like a pro.
+        </Typography>
+
+        <Button
+          variant="contained"
+          sx={{
+            mt: 4,
+            backgroundColor: "white",
+            color: "#5e62a9",
+            fontWeight: 700,
+            px: 4,
+            py: 1.5,
+            borderRadius: 3,
+          }}
+        >
+          Create Your First Task
+        </Button>
+      </Box>
        
 
 
     {/* Footer */}
-    <Footer></Footer>
+    <Box component='section' sx={{backgroundColor:'black'}}>
+        <Container maxWidth='md'>
+          <Grid container>
+            <Grid size={{xs:12,md:12}} >
+              <Stack direction={'row'} justifyContent={'space-around'} className='p-4'>
+                 <Typography variant="h6"  sx={{ color:'white' }}>@ 2026 TaskFlow. All rights reserved</Typography>
+              <Stack direction={'row'} spacing={3}>
+               <GitHubIcon sx={{color:'white'}}></GitHubIcon>
+               <LinkedInIcon sx={{color:'white'}}></LinkedInIcon>
+               <MailIcon sx={{color:'white'}}></MailIcon>
+              </Stack>
+
+              </Stack>
+
+             
+            </Grid>
+
+          </Grid>
+
+        </Container>
+      </Box>
       
     </div>
   )
