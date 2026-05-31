@@ -4,6 +4,7 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
+import { Link } from 'react-router-dom'
 
 function Login() {
 
@@ -113,8 +114,10 @@ function Login() {
                          
                           
                          <Button onClick={onLogin}  className='mb-3' variant='contained' sx={{backgroundColor:'#43b0f1',width:'100%'}}>Sign In</Button>
-                        <Typography className='text-white  fw-light' sx={{fontSize:'.9em'}}>Don't have account?<a href="#" className='text-decoration-none mx-2'>Sign In</a></Typography>
+                        <Link className='text-decoration-none' to={'/register'}>
+                        <Typography className='text-white  fw-light' sx={{fontSize:'.9em'}}>Don't have account?<span href="#" className='text-decoration-none mx-2'>Register</span></Typography>
 
+                        </Link>
                        
                        
                      </Stack>

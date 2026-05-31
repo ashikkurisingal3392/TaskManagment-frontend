@@ -133,8 +133,13 @@ function Register() {
                        
                        
                      </Stack>
+                      <Link className='text-decoration-none text-white' to={'/login'}>
+                    <Typography className=''>Already have an account?
                      
-
+                       <span className='mx-2' sx={{color:'#43b0f1'}}>Login</span> </Typography>
+                      </Link>
+                     
+                   
                     </Stack>
                       <Button component={Link} to={'/'} className='text-white mt-3'>
                     
