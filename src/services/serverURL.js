@@ -1,1 +1,1 @@
-export const serverURl='http://localhost:3000'
+export const serverURl='https://taskmanagment-backend-t0w6.onrender.com'
